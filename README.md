@@ -1,7 +1,14 @@
 # summer2025_project
 Building a Sports Data microservice to practice on architecture and tools.
 
-# This is the rough outline and iniatial idea:
+This project will have three faces:
+1. Microservice-face-phase, one of the core reasons this project idea was chose was to make sure there was an implementation of a microservice that would let me work more with containers - and hopefully touch Kubernetes too.
+
+2. Two primary API: one that generates mock data and simulates a host that is livefed data that will be processed externally. And another that is the backend, handling the data and providing endpoints. Both written in. NET.
+
+3. A super simple Frontend, its service is just to be the visualisation of what the rest of the project really does.
+
+# This is the rough outline and initial idea:
 
 ## Core architecture concepts:
 - Sports Data Generator API (.NET) - Simulates match results, player stats, league standings
