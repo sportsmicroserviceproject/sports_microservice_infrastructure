@@ -8,6 +8,36 @@ This project will have three faces:
 
 3. A super simple Frontend, its service is just to be the visualisation of what the rest of the project really does.
 
+---
+
+# Organisational, repo and folder structure
+
+I am using this structure for the project: created a separate organisation to handle this project. There will be four repos under it:
+
+```bash
+sports-microservices/
+├── sports_microservice_infrastructure/     # Terraform, Ansible, K8s configs
+├── sports_microservice_generator_api/      # Mock data generation service API
+├── sports_microservice_results_api/        # Core business logic (backend) API
+├── sports_microservice_frontend/           # Razor Pages + HTMX? Frontend repo
+└── .github/workflows/                      # Separate workflows per service
+```
+
+This was set up using pure Bash and GH CLI. I created the instructure repo on my private account initially, but transferred it to the organisation and then ran the following:
+
+```bash
+mkdir ~/sports_microservice/sports_microservice_generator_api/ &&
+gh repo create summer2025project/sports_microservice_generator_api --public --clone --description "Mock data generation service API"
+
+mkdir ~/sports_microservice/sports_microservice_results_api/ &&
+gh repo create summer2025project/sports_microservice_results_api --public --clone --description "Core business logic (backend) API"
+
+mkdir ~/sports_microservice/sports_microservice_frontend/ &&
+gh repo create summer2025project/sports_microservice_frontend --public --clone --description "Frontend"
+```
+
+---
+
 # This is the rough outline and initial idea:
 
 ## Core architecture concepts:
@@ -58,20 +88,5 @@ This project will have three faces:
 2. Terraform steps in to provision and config the VM
 3. Ansible is introduced to deploy application
 4. Migrate to k3s-cluster on same VM as above
-
----
-
-# Organisational, repo and folder structure
-
-I am using this structure for the project: created a separate organisation to handle this project. There will be four repos under it:
-
-```bash
-sports-microservices/
-├── sports_microservice_infrastructure/     # Terraform, Ansible, K8s configs
-├── sports_microservice_generator_api/      # Mock data generation service API
-├── sports_microservice_results_api/        # Core business logic (backend) API
-├── sports_microservice_frontend/           # Razor Pages + HTMX? Frontend repo
-└── .github/workflows/                      # Separate workflows per service
-```
   
   
