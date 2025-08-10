@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 *.env
+/terraform/terraform.tfvars
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
