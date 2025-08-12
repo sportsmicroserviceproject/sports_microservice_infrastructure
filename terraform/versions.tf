@@ -1,4 +1,3 @@
-# versions.tf
 terraform {
   required_version = ">= 1.0"
   
@@ -10,7 +9,7 @@ terraform {
   }
 }
 
-# Configure the Hetzner Cloud Provider
+# Provider auth: prefer environment variable HCLOUD_TOKEN or TF_VAR_hcloud_token.
 provider "hcloud" {
   token = var.hcloud_token
 }
