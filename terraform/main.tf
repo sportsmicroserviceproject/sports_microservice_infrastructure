@@ -17,7 +17,7 @@ resource "hcloud_server" "sports_microservices" {
   # Helpful but not required; ignore drift during import
   ssh_keys = [data.hcloud_ssh_key.existing_key.id]
 
-  # Optional: keep these to document reality; we ignore drift first
+  # Optional docs of real networking; safe because we ignore drift initially
   public_net {
     ipv4_enabled = true
     ipv6_enabled = true

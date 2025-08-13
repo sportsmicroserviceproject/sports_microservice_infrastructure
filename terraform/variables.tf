@@ -7,19 +7,19 @@ variable "hcloud_token" {
 variable "server_name" {
   description = "Name of the server to manage/import"
   type        = string
-  default     = "sports-microservices"
+  # No default = MUST be provided in terraform.tfvars
 }
 
 variable "server_type" {
   description = "Server type/size (kept here for documentation; ignored the imports)"
   type        = string
-  default     = "cx22"
+  # No default = MUST be provided in terraform.tfvars
 }
 
 variable "location" {
   description = "Server location (kept here for documentation; ignored for imports)"
   type        = string
-  default     = "hel1"
+  # No default = MUST be provided in terraform.tfvars
 }
 
 variable "ssh_key_name" {
