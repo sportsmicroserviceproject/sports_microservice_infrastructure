@@ -13,7 +13,6 @@
 
 # Terraform-related
 /terraform/terraform.tfvars
-./terraform
 **/.terraform/
 *.tfstate
 *.tfstate.backup
